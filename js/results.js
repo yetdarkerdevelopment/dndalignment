@@ -16,4 +16,5 @@ background.onload = function(){
 context.lineWidth = 33;
 context.beginPath();
 context.moveTo(law, evil);
+context.lineTo(law, evil);
 context.stroke();

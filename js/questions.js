@@ -35,7 +35,7 @@ function nextQuestion() {
         questionElement.innerHTML = `${current_question + 1}. ${questions[current_question]}`;
     }
     else {
-        window.location.assign(`https://yetdarkerdevelopment.github.io/dndalignment/results.html?$law=${answers[0]}&$evil=${answers[1]}`);
+        window.location.assign(`https://yetdarkerdevelopment.github.io/dndalignment/results.html?$law=${answers[0]}&evil=${answers[1]}`);
     }
 }
 

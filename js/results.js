@@ -7,7 +7,7 @@ let evil = urlParams.get("evil") * 666 / 9 + 17;
 let canvas = document.getElementById("result_dot_canvas");
 let context = canvas.getContext("2d");
 background.onload = function(){
-    context.drawImage(background, 0, 0);   
+    context.drawImage(background, 0, 0, canvas.width, canvas.height);   
 }
 context.lineWidth = 33;
 context.beginPath();

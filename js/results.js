@@ -1,0 +1,10 @@
+let queryString = window.location.search;
+let urlParams = new URLSearchParams(queryString);
+let law = urlParams.get("law") * 666 / 14;
+let evil = urlParams.get("evil") * 666 / 9;
+let canvas = document.getElementById("result_dot_canvas");
+let context = canvas.getContext("2d");
+context.lineWidth = 33;
+context.beginPath();
+context.moveTo(law, evil);
+context.stroke();

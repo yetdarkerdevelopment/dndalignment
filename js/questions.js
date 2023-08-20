@@ -39,7 +39,6 @@ function nextQuestion() {
         for (let i = 0; i < questions.length; i += 1) {
             answers[axis[i]] += direction[i] * history[i];
         }
-        console.log(history);
         window.location.assign(`https://yetdarkerdevelopment.github.io/dndalignment/results.html?law=${answers[0]}&evil=${answers[1]}`);
     }
 }

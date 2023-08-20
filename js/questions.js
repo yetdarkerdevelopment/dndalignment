@@ -14,7 +14,7 @@ let questions = [
     "I do what I want.",
     "Individual is more important than the collective.",
     "There is nothing wrong with cheating the system.",
-    "I am a flexable person.",
+    "I am a flexible person.",
     "Spontaneity is undervalued.",
     "I am willing to manipulate people.",
     "I like violence.",

@@ -1,5 +1,6 @@
 let current_question = -1;
 let answers = [0, 0];
+let history = [];
 let questions = [
     "Following the rules is important.",
     "Honor is important to me.",
@@ -44,7 +45,8 @@ function backQuestion() {
         current_question -= 1;
         questionElement = document.getElementById("question");
         questionElement.innerHTML = `${current_question + 1}. ${questions[current_question]}`;
-        answers.pop();
+        axis[direction[current_question + 1]] += history[history.length - 1] * direction[current_question + 1]
+        history.pop()
     }
 }
 
@@ -54,14 +56,17 @@ let noBtn = document.getElementById("noBtn");
 let backBtn = document.getElementById("backBtn");
 
 yesBtn.onclick = function () {
-    answers[axis[current_question]] += direction[current_question]
+    answers[axis[current_question]] += direction[current_question];
+    history.push(1);
     nextQuestion();
 }
 unsureBtn.onclick = function () {
+    history.push(0);
     nextQuestion();
 }
 noBtn.onclick = function () {
     answers[axis[current_question]] -= direction[current_question]
+    history.push(-1);
     nextQuestion();
 }
 backBtn.onclick = backQuestion;

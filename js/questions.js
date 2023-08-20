@@ -36,6 +36,9 @@ function nextQuestion() {
         questionElement.innerHTML = `${current_question + 1}. ${questions[current_question]}`;
     }
     else {
+        for (let i = 0; i < questions.length; i += 1) {
+            answers[axis[i]] += direction[i] * history[i];
+        }
         window.location.assign(`https://yetdarkerdevelopment.github.io/dndalignment/results.html?law=${answers[0]}&evil=${answers[1]}`);
     }
 }
@@ -45,7 +48,6 @@ function backQuestion() {
         current_question -= 1;
         questionElement = document.getElementById("question");
         questionElement.innerHTML = `${current_question + 1}. ${questions[current_question]}`;
-        axis[direction[current_question + 1]] += history[history.length - 1] * direction[current_question + 1]
         history.pop()
     }
 }
@@ -56,7 +58,6 @@ let noBtn = document.getElementById("noBtn");
 let backBtn = document.getElementById("backBtn");
 
 yesBtn.onclick = function () {
-    answers[axis[current_question]] += direction[current_question];
     history.push(1);
     nextQuestion();
 }
@@ -65,7 +66,6 @@ unsureBtn.onclick = function () {
     nextQuestion();
 }
 noBtn.onclick = function () {
-    answers[axis[current_question]] -= direction[current_question]
     history.push(-1);
     nextQuestion();
 }

@@ -21,13 +21,14 @@ let questions = [
     "I put my goals above others.",
     "Might makes right.",
     "Others are worthless.",
+    "I do not easily let go of my gruges.",
     "I have a strong sense of emapthy.",
     "Death is a tragedy that should be avoided.",
     "I follow a humanist philosophy.",
-    "I value life. "
+    "I value life."
 ];
-let axis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-let direction = [1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, -1, -1, -1, -1]
+let axis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+let direction = [1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1]
 
 function nextQuestion() {
     current_question += 1;
